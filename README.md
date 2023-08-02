@@ -1,0 +1,1 @@
+# go-test-suite-template
