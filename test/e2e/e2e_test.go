@@ -43,6 +43,6 @@ var _ = Describe("API Endpoints", func() {
 		resBody, err := io.ReadAll(resp.Body)
 		Expect(err).NotTo(HaveOccurred())
 
-		Expect(resBody).Should(Equal([]byte("Hello, World!")))
+		Expect(resBody).Should(Equal([]byte("Hello World!")))
 	})
 })
