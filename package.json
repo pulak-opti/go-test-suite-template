@@ -1,0 +1,25 @@
+{
+  "name": "go-test-suite-template",
+  "version": "1.0.0",
+  "description": "### To run the tests ```bash $ go test -v ./... ```",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node postman-tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pulak-opti/go-test-suite-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pulak-opti/go-test-suite-template/issues"
+  },
+  "homepage": "https://github.com/pulak-opti/go-test-suite-template#readme",
+  "dependencies": {
+    "newman": "^5.3.2"
+  }
+}

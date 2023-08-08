@@ -1,6 +1,7 @@
 package main
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
@@ -22,5 +23,8 @@ func main() {
 		Addr:    ":8080",
 		Handler: r,
 	}
-	srv.ListenAndServe()
+	log.Println("Server is listening on port 8080")
+	if err := srv.ListenAndServe(); err != nil {
+		log.Fatal(err)
+	}
 }
