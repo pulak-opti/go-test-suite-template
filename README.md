@@ -14,6 +14,6 @@ $ go test -v ./...
 ```bash
 $ npm test
 ```
-Note: Make sure a server is running on localhost
+Note: Make sure a server is running on localhost.
 
 

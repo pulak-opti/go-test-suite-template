@@ -1,7 +1,4 @@
-# This workflow will build a golang project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
-
-name: Go
+name: Postman
 
 on:
   push:
@@ -10,8 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-
-  build:
+  postman-tests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -21,11 +17,11 @@ jobs:
       with:
         go-version: '1.20'
 
-    - name: Build
-      run: go build -v ./...
+    - name: Install dependencies
+      run: cd hello-go && npm install
 
+    - name: Run Frontdoor
+      run: cd hello-go && go run main.go &
+    
     - name: Test
-      run: go test -v ./...
-
-    - name: Test-e2e
-      run: make test
+      run: npm test
