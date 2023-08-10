@@ -7,7 +7,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  postman-tests:
+  e2e-tests:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -17,11 +17,10 @@ jobs:
       with:
         go-version: '1.20'
 
-    - name: Install dependencies
-      run: cd hello-go && npm install
-
-    - name: Run Frontdoor
-      run: cd hello-go && go run main.go &
-    
     - name: Test
-      run: cd hello-go && npm test
+      run: |
+        cd hello-go
+        npm install
+        go run main.go &
+        npm test
+
