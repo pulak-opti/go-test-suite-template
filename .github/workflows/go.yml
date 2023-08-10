@@ -19,6 +19,7 @@ jobs:
 
     - name: Run server
       run: |
+        cd hello-go
         go run main.go &
 
     - name: Check Server Readiness
