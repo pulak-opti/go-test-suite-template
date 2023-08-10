@@ -24,4 +24,4 @@ jobs:
       run: cd hello-go && go run main.go &
     
     - name: Test
-      run: npm test
+      run: cd hello-go && npm test
