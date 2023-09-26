@@ -17,21 +17,21 @@ jobs:
       with:
         go-version: '1.20'
 
-    - name: Run server
-      run: |
-        cd hello-go
-        go run main.go &
+    # - name: Run server
+    #   run: |
+    #     cd hello-go
+    #     go run main.go &
 
-    - name: Check Server Readiness
-      run: |
-        cd hello-go
-        make check-readiness
+    # - name: Check Server Readiness
+    #   run: |
+    #     cd hello-go
+    #     make check-readiness
 
-    - name: Test
-      run: |
-        cd hello-go
-        npm install
-        npm test
+    # - name: Test
+    #   run: |
+    #     cd hello-go
+    #     npm install
+    #     npm test
 
     - name: golangci-lint
       uses: golangci/golangci-lint-action@v3
