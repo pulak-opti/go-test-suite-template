@@ -42,6 +42,7 @@ jobs:
     #     npm test
 
     - name: golangci-lint
+      working-directory: frontdoor-go
       uses: golangci/golangci-lint-action@v3
       with:
         version: v1.54
